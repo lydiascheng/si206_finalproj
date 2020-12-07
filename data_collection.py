@@ -42,6 +42,7 @@ def populateTracksTable(cur, conn):
 """ Delete track table rows with no popularity score"""
 def deleteZeroPopularityTracks(cur, conn):
     cur.execute("DELETE FROM Tracks WHERE popularity = 0")
+    cur.execute("DELETE FROM Tracks WHERE popularity = 1")
     conn.commit()
 
 def main():
