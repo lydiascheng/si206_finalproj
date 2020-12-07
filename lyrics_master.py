@@ -22,7 +22,7 @@ def addAllSongLyrics(cur, conn):
     # makes sure that data doesn't repeat
     all_ids = cur.execute("SELECT song_id FROM Lyrics_MASTER")
     all_ids = cur.fetchall()
-    if len(all_ids) > 0 and all_ids[-1][0] == 140:
+    if len(all_ids) > 0 and all_ids[-1][0] >= 140:
         return
 
     cur.execute("SELECT song_id FROM Tracks")
