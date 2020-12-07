@@ -75,8 +75,7 @@ def insertData(cur, conn):
     all_ids = cur.fetchall()
 
     if len(all_ids) > 0:
-        # need something to stop it
-        if all_ids[-1][0] == 141:
+        if all_ids[-1][0] > 137:
             return
         end_id = all_ids[-1][0]
     else:
