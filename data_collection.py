@@ -24,9 +24,9 @@ def populateTracksTable(cur, conn):
     #sets count to end
     count = 141
     #updates count based on where last api call left off
-    #106 songs is how many should be in the database
+    #105 songs is how many should be in the database
     for row in cur:
-        if row[0] == 106:
+        if row[0] == 105:
             break
         else:
             count = row[0]
